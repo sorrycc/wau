@@ -28,7 +28,7 @@ class Watch
   upload: (filepath) ->
     return if path.extname(filepath) == ".swp"
     command = @getCommand(filepath)
-    console.log "  >> ".white + filepath.replace(@path, "").blue
+    console.log "  >> ".white + "[#{@type}] #{filepath.replace(@path, "")}".blue
     child_process.exec command, (e, stdout, stderr) ->
       console.log "  error: #{e}".red if e
 

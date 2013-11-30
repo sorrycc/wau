@@ -22,7 +22,7 @@ $ wau
 
 * 报 `EMFILE error` 怎么处理?
 
-  执行下面命令并重启机器.
+  执行下面命令并重启机器，详见：[https://github.com/joyent/node/issues/2479](https://github.com/joyent/node/issues/2479) 。
 
   ```
   echo 'kern.maxfiles=20480' | sudo tee -a /etc/sysctl.conf
