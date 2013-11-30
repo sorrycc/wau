@@ -2,12 +2,14 @@
   "host": "admin@cashier-1-2.ui.alipay.net",
   "project": {
     "cashier": {
+      "test": "./cashier-htdocs/",
       "remotePath": "/home/admin/build/",
       "watch": [
         "./cashier-htdocs/"
       ]
     },
     "uisvr": {
+      "test": "./public/financeComponent/head.vm",
       "remotePath": "/home/admin/uisvr/",
       "watch": [
         "./public/"

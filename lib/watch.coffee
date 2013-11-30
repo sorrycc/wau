@@ -1,3 +1,6 @@
+##
+# @fileOverview Watch 类.
+##
 
 node_watch    = require "node-watch"
 child_process = require "child_process"
@@ -5,7 +8,7 @@ path          = require "path"
 fs            = require "fs"
 
 require("colorful").toxic()
-CONFIG = JSON.parse fs.readFileSync "./config.json"
+CONFIG = require "./config"
 
 
 class Watch
@@ -41,14 +44,4 @@ class Watch
     CONFIG["host"]
 
 
-# Init.
-# new Watch("/Users/chencheng/Documents/Work/Projects/jigai/uisvr/", "uisvr")
-# new Watch("/Users/chencheng/Documents/Work/Projects/jigai/cashier/", "cashier")
-
-# isCasheir -> (dirpath)
-  
-
-# console.log __dirname
-
 module.exports = Watch
-

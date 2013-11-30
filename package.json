@@ -5,6 +5,10 @@
   "bin": {
     "wau": "./bin/wau"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sorrycc/wau.git"
+  },
   "keywords": [
     "watch",
     "upload"
