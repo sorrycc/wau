@@ -1,0 +1,17 @@
+{
+  "host": "admin@cashier-1-2.ui.alipay.net",
+  "project": {
+    "cashier": {
+      "remotePath": "/home/admin/build/",
+      "watch": [
+        "./cashier-htdocs/"
+      ]
+    },
+    "uisvr": {
+      "remotePath": "/home/admin/uisvr/",
+      "watch": [
+        "./public/"
+      ]
+    }
+  }
+}

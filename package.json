@@ -1,0 +1,22 @@
+{
+  "name": "wau",
+  "description": "Watch and upload.",
+  "version": "0.1.0",
+  "bin": {
+    "wau": "./bin/wau"
+  },
+  "keywords": [
+    "watch",
+    "upload"
+  ],
+  "engines": {
+    "node": ">= 0.8.1"
+  },
+  "author": "chencheng <sorrycc@gmail.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "colorful": "~2.1.0",
+    "coffee-script": "~1.6.3"
+  }
+}
