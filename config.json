@@ -1,5 +1,5 @@
 {
-  "host": "admin@cashier-1-2.ui.alipay.net",
+  "host": "",
   "project": {
     "cashier": {
       "test": "./cashier-htdocs/",

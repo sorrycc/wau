@@ -2,6 +2,7 @@
   "name": "wau",
   "description": "Watch and upload.",
   "version": "0.1.0",
+  "main": "./lib/watch.js",
   "bin": {
     "wau": "./bin/wau"
   },
@@ -21,6 +22,7 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "colorful": "~2.1.0",
-    "coffee-script": "~1.6.3"
+    "coffee-script": "~1.6.3",
+    "fs-extra": "~0.8.1"
   }
 }

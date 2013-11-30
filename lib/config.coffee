@@ -1,6 +1,9 @@
 
 path = require "path"
-fs = require "fs"
+fs = require "fs-extra"
 
-filePath = path.join(__dirname, "../config.json")
-module.exports = JSON.parse fs.readFileSync filePath
+destPath = path.join process.env.HOME, "./.wau"
+origPath = path.join(__dirname, "../config.json")
+
+fs.copySync origPath, destPath if !fs.existsSync destPath
+module.exports = JSON.parse fs.readFileSync destPath

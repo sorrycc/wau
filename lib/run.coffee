@@ -17,6 +17,10 @@ watch = (dir) ->
   count
 
 init = ->
+  if !CONFIG["host"]
+    console.log "Please set host in ~/.wau first.".red
+    return
+
   dir = process.cwd()
   return if watch(dir) > 0
 
