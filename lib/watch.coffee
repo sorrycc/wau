@@ -26,6 +26,7 @@ class Watch
     node_watch path.join(@path, dirpath), (filepath) => @upload filepath
 
   upload: (filepath) ->
+    return if path.extname(filepath) == ".swp"
     command = @getCommand(filepath)
     console.log "  >> ".white + filepath.replace(@path, "").blue
     child_process.exec command, (e, stdout, stderr) ->
