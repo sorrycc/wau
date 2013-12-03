@@ -8,13 +8,13 @@ path          = require "path"
 fs            = require "fs"
 
 require("colorful").toxic()
-CONFIG = require "./config"
+Config = require "./config"
 
 
 class Watch
 
   constructor: (@path, @type) ->
-    @config = CONFIG["project"][@type]
+    @config = Config["project"][@type]
     @setupWatch()
 
   setupWatch: ->
@@ -25,6 +25,7 @@ class Watch
     console.log "watching: " + "[#{@type}] #{dirpath}".green
     node_watch path.join(@path, dirpath), (filepath) => @upload filepath
 
+  # [todo] - ssh 支持用户名密码.
   upload: (filepath) ->
     return if path.extname(filepath) == ".swp"
     command = @getCommand(filepath)
@@ -42,7 +43,7 @@ class Watch
     ].join " "
 
   getHost: ->
-    CONFIG["host"]
+    Config["host"]
 
 
 module.exports = Watch
