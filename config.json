@@ -1,5 +1,8 @@
 {
   "host": "",
+  "ignore_regexes": [
+    "\\.swp$", "\\.vm$"
+  ],
   "project": {
     "cashier": {
       "test": "./cashier-htdocs/",

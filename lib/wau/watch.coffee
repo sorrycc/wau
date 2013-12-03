@@ -25,9 +25,14 @@ class Watch
     console.log "watching: " + "[#{@type}] #{dirpath}".green
     node_watch path.join(@path, dirpath), (filepath) => @upload filepath
 
-  # [todo] - ssh 支持用户名密码.
+  # [todo] - scp 支持用户名密码.
+  # [todo] - 添加 ignore_regexes 支持.
   upload: (filepath) ->
-    return if path.extname(filepath) == ".swp"
+    if Config["ignore_regexes"]
+      for item in Config["ignore_regexes"]
+        re = new RegExp item
+        return if filepath.match re
+
     command = @getCommand(filepath)
     console.log "  >> ".white + "[#{@type}] #{filepath.replace(@path, "")}".blue
     child_process.exec command, (e, stdout, stderr) ->
