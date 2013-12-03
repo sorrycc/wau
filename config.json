@@ -1,7 +1,9 @@
 {
   "host": "",
   "ignore_regexes": [
-    "\\.swp$", "\\.vm$"
+    "\\.swp$",
+    "\\.git", "\\.svn", "\\.hg",
+    "\\.DS_Store", "Thumbs\\.db", "desktop\\.ini"
   ],
   "project": {
     "cashier": {
