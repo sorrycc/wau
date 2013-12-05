@@ -47,6 +47,7 @@ class Watch
       "#{@getHost()}:#{remotePath}"
     ].join " "
 
+  # [todo] - 支持 config 覆盖，在项目目录里可以有一个 .waurc
   getHost: ->
     Config["host"]
 
