@@ -26,7 +26,6 @@ class Watch
     node_watch path.join(@path, dirpath), (filepath) => @upload filepath
 
   # [todo] - scp 支持用户名密码.
-  # [todo] - 添加 ignore_regexes 支持.
   upload: (filepath) ->
     if Config["ignore_regexes"]
       for item in Config["ignore_regexes"]
