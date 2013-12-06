@@ -19,7 +19,7 @@ class Project
     @setupWatch()
 
   readPeojctConfig: ->
-    waurcPath = path.join @path, ".waurc"
+    waurcPath = path.join @path, ".wau"
     ret = {}
     if fs.existsSync waurcPath
       ret = JSON.parse fs.readFileSync waurcPath
