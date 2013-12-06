@@ -18,6 +18,43 @@ $ npm install wau -g
 $ wau
 ```
 
+### 配置说明
+
+```
+{
+  "host": "admin@1.1.1.1",
+  "ignore_regexes": [
+    "\\.swp$"
+  ],
+  "project": {
+    "cashier": {
+      "test": "./cashier-htdocs/",
+      "remotePath": "/home/admin/build/",
+      "watch": [
+        "./cashier-htdocs/"
+      ]
+    }
+  }
+}
+```
+
+* host: 远程机器，需配置不用密码自动登陆
+* ignore_regexes: 列在这里的文件不会被上传，通过正则的方式匹配
+* project: 项目
+  * test: 用来探测当前文件夹是否为该项目
+  * remotePath: 对应的远程服务器目录
+  * watch: 项目中需监听的文件夹
+
+### 项目配置
+
+在项目目录里可以增加一个 `.wau` 文件，里面的 host 优先级比 `~/.wau` 里的高。
+
+```
+{
+  "host": "admin@1.1.1.1"
+}
+```
+
 ## FAQ
 
 * 报 `EMFILE error` 怎么处理?
