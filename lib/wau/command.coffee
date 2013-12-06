@@ -2,7 +2,7 @@
 path   = require "path"
 fs     = require "fs"
 Config = require "./config"
-Watch  = require "./watch"
+Project  = require "./project"
 
 
 class Command
@@ -41,7 +41,7 @@ class Command
     for k, v of Config["project"]
       if @test dir, k
         count++
-        new Watch dir, k
+        new Project dir, k
     count
 
 
