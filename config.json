@@ -3,7 +3,7 @@
   "ignore_regexes": [
     "\\.swp$",
     "\\.git", "\\.svn", "\\.hg",
-    "\\.DS_Store", "Thumbs\\.db", "desktop\\.ini"
+    "\\.DS_Store", "Thumbs\\.db", "desktop\\.ini", "\/svn\/"
   ],
   "project": {
     "cashier": {
